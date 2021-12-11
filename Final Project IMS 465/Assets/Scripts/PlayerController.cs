@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private float speed;
+    [SerializeField] private Transform throwTracker;
+    [SerializeField] private GameObject heldBall;
+    [SerializeField] private GameObject dummyBall;
     private PlayerAction playerAction;
     private Vector2 movementVector;
 
@@ -41,7 +44,26 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log(context);
+            ThrowBall();
+        }
+    }
+
+    public void HoldBall(GameObject ball)
+    {
+        heldBall = ball;
+        heldBall.SetActive(false);
+        dummyBall.SetActive(true);
+    }
+
+    public void ThrowBall()
+    {
+        if (heldBall != null)
+        {
+            dummyBall.SetActive(false);
+            heldBall.SetActive(true);
+            heldBall.transform.position = throwTracker.position;
+            heldBall.GetComponent<Rigidbody>().AddForce(throwTracker.forward * 15, ForceMode.Impulse);
+            heldBall = null;
         }
     }
 }
