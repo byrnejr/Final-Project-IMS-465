@@ -1,0 +1,21 @@
+{
+    "name": "InputActionConfig",
+    "maps": [
+        {
+            "name": "Player1",
+            "id": "271cfb32-8586-443a-bd91-1495cb692ad5",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "cf023044-6ec7-44b8-9a33-f58b39f2ee8b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
