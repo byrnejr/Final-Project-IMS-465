@@ -32,7 +32,8 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        playerRB.AddForce(new Vector3(movementVector.x, 0.0f, movementVector.y) * speed, ForceMode.Force);
+        playerRB.MovePosition(playerRB.position + new Vector3(movementVector.x, 0.0f, movementVector.y) * speed * Time.fixedDeltaTime);
+        //playerRB.AddForce(new Vector3(movementVector.x, 0.0f, movementVector.y) * speed, ForceMode.Force);
     }
 
     public void Movement(InputAction.CallbackContext context)
@@ -50,9 +51,13 @@ public class PlayerController : MonoBehaviour
 
     public void HoldBall(GameObject ball)
     {
-        heldBall = ball;
-        heldBall.SetActive(false);
-        dummyBall.SetActive(true);
+        if (heldBall == null)
+        {
+            heldBall = ball;
+            heldBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            heldBall.SetActive(false);
+            dummyBall.SetActive(true);
+        }
     }
 
     public void ThrowBall()

@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/InputActionConfig.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/InputAsset.inputactions'
 
 using System;
 using System.Collections;
@@ -12,7 +12,7 @@ public class @PlayerAction : IInputActionCollection, IDisposable
     public @PlayerAction()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""InputActionConfig"",
+    ""name"": ""InputAsset"",
     ""maps"": [
         {
             ""name"": ""Player1"",
@@ -151,7 +151,7 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9bec764a-a4b4-4fb1-b780-c91fb20ad713"",
-                    ""path"": ""<Keyboard>/h"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -184,7 +184,7 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""99acac24-158b-49e5-88e6-c207782f0bbe"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -195,7 +195,7 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""faba0a92-fe65-4e13-af1e-18b11c139f9b"",
-                    ""path"": ""<Keyboard>/k"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -206,7 +206,7 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""440bccce-cf27-4c95-9535-bbcee7c72191"",
-                    ""path"": ""<Keyboard>/j"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -217,7 +217,7 @@ public class @PlayerAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""dc2f3b84-adde-4bee-83c6-5934fc5d2860"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
